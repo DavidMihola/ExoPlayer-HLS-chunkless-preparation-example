@@ -528,6 +528,7 @@ public class PlayerActivity extends AppCompatActivity
       case C.TYPE_HLS:
         return new HlsMediaSource.Factory(dataSourceFactory)
             .setDrmSessionManager(drmSessionManager)
+            .setAllowChunklessPreparation(true)
             .createMediaSource(uri);
       case C.TYPE_OTHER:
         return new ProgressiveMediaSource.Factory(dataSourceFactory)
